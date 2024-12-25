@@ -30,7 +30,7 @@ class UserComponent extends Component
         app()[PermissionRegistrar::class]->forgetCachedPermissions();
 
         // Check if the user has the required permission to delete
-        if (!$user->hasPermissionTo('Delete User')) {
+        if (!$user->hasPermissionTo('delete user')) {
             abort(403, 'You do not have permission to delete this user.');
         }
 

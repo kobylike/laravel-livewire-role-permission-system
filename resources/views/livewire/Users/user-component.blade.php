@@ -61,12 +61,12 @@
                          Assign Role to User</a>
                     </a>
 
-                    {{-- @hasanyrole('Admin|Super Admin')
-                        @can('Delete User') --}}
+                     @hasanyrole('Admin')
+                        @can('delete user')
                     <a wire:click='delete({{$user->id}})' class="btn btn-danger btn-sm">Delete</a>
 
-                    {{-- @endcan
-                    @endhasanyrole --}}
+                     @endcan
+                    @endhasanyrole
                     @empty
                     <h4 > No Users add yet</h4>
                 </td>
